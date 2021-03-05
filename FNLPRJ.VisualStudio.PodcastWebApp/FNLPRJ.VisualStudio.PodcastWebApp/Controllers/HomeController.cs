@@ -27,5 +27,26 @@ namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
 
             return View();
         }
+
+        public ActionResult Episode()
+        {
+            ViewBag.Message = "The Episodes page";
+
+            return View();
+        }
+
+        public ActionResult MessageUs()
+        {
+            ViewBag.Message = "The Message Us page";
+
+            return View();
+        }
+
+        public ActionResult EpisodeContent()
+        {
+            ViewBag.Message = "The Episode content page";
+
+            return View();
+        }
     }
 }

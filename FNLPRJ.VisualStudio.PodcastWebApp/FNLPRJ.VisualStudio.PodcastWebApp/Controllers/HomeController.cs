@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
 {
-    //For test
+    //This is purely a symbolic gitpush, because this technical writing midterm is kicking my ass
     public class HomeController : Controller
     {
         public ActionResult Index()

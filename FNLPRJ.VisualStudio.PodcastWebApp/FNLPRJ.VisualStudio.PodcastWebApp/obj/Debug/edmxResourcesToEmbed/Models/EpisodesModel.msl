@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="finalProjectDatabaseModelStoreContainer" CdmEntityContainer="finalProjectDatabaseEntities">
+    <EntitySetMapping Name="EpisodeContents">
+      <EntityTypeMapping TypeName="finalProjectDatabaseModel.EpisodeContent">
+        <MappingFragment StoreEntitySet="EpisodeContent">
+          <ScalarProperty Name="episodeNumber" ColumnName="episodeNumber" />
+          <ScalarProperty Name="paragraphOne" ColumnName="paragraphOne" />
+          <ScalarProperty Name="paragraphTwo" ColumnName="paragraphTwo" />
+          <ScalarProperty Name="paragraphThree" ColumnName="paragraphThree" />
+          <ScalarProperty Name="paragraphFour" ColumnName="paragraphFour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Episodes">
+      <EntityTypeMapping TypeName="finalProjectDatabaseModel.Episode">
+        <MappingFragment StoreEntitySet="Episodes">
+          <ScalarProperty Name="episodeNumber" ColumnName="episodeNumber" />
+          <ScalarProperty Name="soundFileLocation" ColumnName="soundFileLocation" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="picFileLocation" ColumnName="picFileLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribers">
+      <EntityTypeMapping TypeName="finalProjectDatabaseModel.Subscriber">
+        <MappingFragment StoreEntitySet="Subscribers">
+          <ScalarProperty Name="subID" ColumnName="subID" />
+          <ScalarProperty Name="prefName" ColumnName="prefName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

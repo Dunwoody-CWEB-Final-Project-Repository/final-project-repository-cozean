@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="finalProjectDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EpisodeContent">
+    <Key>
+      <PropertyRef Name="episodeNumber" />
+    </Key>
+    <Property Name="episodeNumber" Type="int" Nullable="false" />
+    <Property Name="paragraphOne" Type="nvarchar" MaxLength="1000" />
+    <Property Name="paragraphTwo" Type="nvarchar" MaxLength="1000" />
+    <Property Name="paragraphThree" Type="nvarchar" MaxLength="1000" />
+    <Property Name="paragraphFour" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="Episodes">
+    <Key>
+      <PropertyRef Name="episodeNumber" />
+    </Key>
+    <Property Name="episodeNumber" Type="int" Nullable="false" />
+    <Property Name="soundFileLocation" Type="nvarchar" MaxLength="75" />
+    <Property Name="description" Type="nvarchar" MaxLength="250" />
+    <Property Name="picFileLocation" Type="nvarchar" MaxLength="75" />
+  </EntityType>
+  <EntityType Name="Subscribers">
+    <Key>
+      <PropertyRef Name="subID" />
+    </Key>
+    <Property Name="subID" Type="int" Nullable="false" />
+    <Property Name="prefName" Type="nvarchar" MaxLength="25" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="finalProjectDatabaseModelStoreContainer">
+    <EntitySet Name="EpisodeContent" EntityType="Self.EpisodeContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Episodes" EntityType="Self.Episodes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscribers" EntityType="Self.Subscribers" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

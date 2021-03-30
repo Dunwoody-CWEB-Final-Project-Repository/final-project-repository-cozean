@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FNLPRJ.VisualStudio.PodcastWebApp.Models;
 
 namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
 {
     
     public class HomeController : Controller
     {
+
+        finalProjectDatabaseEntities dbConnection = new finalProjectDatabaseEntities();
+
+
         public ActionResult Index()
         {
-            return View();
+            List<Episode> episodes = dbConnection.Episodes.ToList();
+            return View(episodes);
         }
 
-        public ActionResult About()
+        public ActionResult IndexOG()
         {
             ViewBag.Message = "Your application description page.";
 

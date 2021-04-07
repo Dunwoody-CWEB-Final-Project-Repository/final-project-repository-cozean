@@ -22,7 +22,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><img src="~/Content/Pictures/FNLPRJ.twitterPicture.png" height="35" width="35" style="margin: 8px 20px 0px 0px;" /></li>
+                    <li><img src="~/Content/img/FNLPRJ.twitterPicture.png" height="35" width="35" style="margin: 8px 20px 0px 0px;" /></li>
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Episodes", "Episode", "Home")</li>
                 </ul>
@@ -34,9 +34,6 @@
         @RenderBody()
     </div>
 
-    <footer style="background-color: lightgray; height:50px;">
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

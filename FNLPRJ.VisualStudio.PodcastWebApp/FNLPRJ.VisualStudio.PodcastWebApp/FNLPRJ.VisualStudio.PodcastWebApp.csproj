@@ -206,13 +206,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AudioFiles\1. mp3.mp3" />
+    <Content Include="Content\AudioFiles\1mp3.mp3" />
+    <Content Include="Content\AudioFiles\4mp3.mp3" />
+    <Content Include="Content\AudioFiles\5mp3.mp3" />
+    <Content Include="Content\AudioFiles\6mp3.mp3" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Pictures\ADVTOP.ScaredyCatsLogo.jpg" />
-    <Content Include="Content\Pictures\FNLPRJ.twitterPicture.png" />
+    <Content Include="Content\img\ScaredyCatsLogo.jpg" />
+    <Content Include="Content\img\FNLPRJ.twitterPicture.png" />
     <Content Include="Content\divContainer.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -261,7 +264,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\IndexOG.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -282,10 +284,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\Episode.cshtml" />
     <Content Include="Views\Home\MessageUs.cshtml" />
-    <Content Include="Views\Home\EpisodeContent.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\AdminSection.cshtml" />
+    <Content Include="Views\Home\_Create.cshtml" />
+    <Content Include="Views\Home\_EditUpdate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

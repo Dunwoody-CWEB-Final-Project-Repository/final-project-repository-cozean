@@ -4,48 +4,49 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<link rel="stylesheet" type="text/css" href="~/Content/divContainer.css" media="screen" />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table" style="background-color:white;">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.episodeNumber)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.soundFileLocation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.picFileLocation)
-        </th>
-        <th></th>
-    </tr>
+    <h1 style="text-align:center; color:white;">Welcome Scaredy Cats!!!</h1>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.episodeNumber)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.soundFileLocation)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.picFileLocation)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.episodeNumber }) |
-            @Html.ActionLink("Details", "Details", new { id=item.episodeNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.episodeNumber })
-        </td>
-    </tr>
-}
+    <h2 style="color:black; margin-left:40px;">Latest Episodes</h2>
 
-</table>
+    <div class="episodeDivContainer" style="margin:20px 20px 20px 20px;">
+
+        @foreach (var item in Model)
+        {
+
+
+            <div style="height:auto; width: 250px; border-radius: 5px; background-color:#CBB6E0; margin: 20px 80px 20px 80px; border: 1px solid black;">
+
+                <h4 style="text-align:center;"><strong>Episode @Html.DisplayFor(modelItem => item.episodeNumber) </strong></h4>
+
+                <img src="~/Content/img/@Html.DisplayFor(modelItem => item.picFileLocation)" style="height:125px; width:125px; display:block;margin:auto;" />
+
+                <br />
+
+                <p> @Html.DisplayFor(modelItem => item.description) </p>
+
+                <audio controls style="width:200px; display:block; margin:auto;">
+                    <source src="~/Content/AudioFiles/@Html.DisplayFor(modelItem => item.soundFileLocation)" type="audio/mp3" />
+                </audio>
+
+                <br />
+
+            </div>
+        
+        }
+
+    </div>
+
+    <div style="margin:auto; text-align:center; margin-bottom: 25px;">
+        <button style="width:400px; margin: 10px 0px 10px 0px;" class="btn btn-primary btn-lg">More Episodes</button>
+        <br />
+        <button style="margin:10px 0px 10px 0px;" class="btn btn-danger btn-lg">Follow on Spotify</button>
+        <br />
+        <button style="margin:10px 0px 10px 0px;" class="btn btn-danger btn-lg">Follow on iTunes</button>
+        <br />
+        <button style="margin:10px 0px 10px 0px;" class="btn btn-warning btn-lg">Subscribe for Email-Alterts!!!</button>
+
+    </div>
+
+

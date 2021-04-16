@@ -289,6 +289,7 @@
     <Content Include="Views\Home\AdminSection.cshtml" />
     <Content Include="Views\Home\_Create.cshtml" />
     <Content Include="Views\Home\_EditUpdate.cshtml" />
+    <Content Include="Views\Home\Episodes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

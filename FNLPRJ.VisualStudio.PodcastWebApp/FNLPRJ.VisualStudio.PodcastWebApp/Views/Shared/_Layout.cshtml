@@ -8,8 +8,8 @@
     @Scripts.Render("~/bundles/modernizr")
     
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="background-color: darkgray;">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="align-items:center;">
         <div class="container">
             <div style="margin:auto;">
 
@@ -23,8 +23,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><img src="~/Content/img/FNLPRJ.twitterPicture.png" height="35" width="35" style="margin: 8px 20px 0px 0px;" /></li>
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Episodes", "Episode", "Home")</li>
+                    <li>@Html.ActionLink("Home","Index", "Home")</li>
                 </ul>
 
             </div>
@@ -34,9 +33,17 @@
         @RenderBody()
     </div>
 
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <footer>
+        <div style="height:50px; background-color:#313131; display:flex;" >
+            <div style="margin:auto;">
+                <img style="align-content:center;" src="~/Content/img/FNLPRJ.twitterPicture.png" height="35" width="35" />
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

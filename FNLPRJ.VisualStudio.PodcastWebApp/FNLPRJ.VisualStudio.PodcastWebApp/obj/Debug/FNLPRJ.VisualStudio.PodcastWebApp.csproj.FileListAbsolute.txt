@@ -101,8 +101,8 @@ C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualS
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.csprojAssemblyReference.cache
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.csproj.CoreCompileInputs.cache
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.csproj.CopyComplete
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.dll
 C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.pdb
-C:\Users\cozbryj\Documents\GitHub\final-project-repository-cozean\FNLPRJ.VisualStudio.PodcastWebApp\FNLPRJ.VisualStudio.PodcastWebApp\obj\Debug\FNLPRJ.VisualStudio.PodcastWebApp.csprojAssemblyReference.cache

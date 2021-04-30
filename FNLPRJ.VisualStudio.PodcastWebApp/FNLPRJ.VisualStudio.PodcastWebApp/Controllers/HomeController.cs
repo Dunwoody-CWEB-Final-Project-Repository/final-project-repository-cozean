@@ -26,6 +26,7 @@ namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
             return View(episodes);
         }
 
+        [Authorize]
         public ActionResult AdminSection()
         {
             List<Episode> episodes = dbConnection.Episodes.ToList();

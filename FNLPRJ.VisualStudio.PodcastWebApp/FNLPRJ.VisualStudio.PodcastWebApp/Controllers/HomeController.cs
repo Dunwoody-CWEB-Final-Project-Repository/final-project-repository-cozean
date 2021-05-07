@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FNLPRJ.VisualStudio.PodcastWebApp.Models;
+using FNLPRJ.VisualStudio.PodcastWebApp.Domain.Abstract;
 
 namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
 {
@@ -13,6 +14,17 @@ namespace FNLPRJ.VisualStudio.PodcastWebApp.Controllers
 
         finalProjectDatabaseEntities dbConnection = new finalProjectDatabaseEntities();
 
+        private IEpisodeRepository myrepository;
+
+        public HomeController(IEpisodeRepository episodeRepository)
+        {
+            this.myrepository = episodeRepository;
+        }
+
+        public ViewResult HomeTest()
+        {
+            return View(myrepository.Episodes);
+        }
 
         public ActionResult Index()
         {

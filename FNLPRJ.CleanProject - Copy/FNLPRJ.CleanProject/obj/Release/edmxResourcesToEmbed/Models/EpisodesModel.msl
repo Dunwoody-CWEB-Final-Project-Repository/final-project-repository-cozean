@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EpisodesModelStoreContainer" CdmEntityContainer="EpisodesEntities">
+    <EntitySetMapping Name="Episodes">
+      <EntityTypeMapping TypeName="EpisodesModel.Episode">
+        <MappingFragment StoreEntitySet="Episodes">
+          <ScalarProperty Name="episodeNumber" ColumnName="episodeNumber" />
+          <ScalarProperty Name="soundFileLocation" ColumnName="soundFileLocation" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="picFileLocation" ColumnName="picFileLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribers">
+      <EntityTypeMapping TypeName="EpisodesModel.Subscriber">
+        <MappingFragment StoreEntitySet="Subscribers">
+          <ScalarProperty Name="subID" ColumnName="subID" />
+          <ScalarProperty Name="prefName" ColumnName="prefName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

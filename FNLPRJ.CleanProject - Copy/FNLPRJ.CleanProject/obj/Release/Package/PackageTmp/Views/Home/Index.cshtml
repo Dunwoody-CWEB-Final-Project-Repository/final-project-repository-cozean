@@ -1,0 +1,94 @@
+﻿@model IEnumerable<FNLPRJ.CleanProject.Models.Episode>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/divContainer.css" media="screen" />
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Authenticated</p>
+}
+else
+{
+    <p>Not Authenticated</p>
+}
+
+<h1 style="text-align:center; color:white;">Welcome Scaredy Cats!!!</h1>
+
+<h2 style="color:black; margin-left:40px;">Latest Episodes</h2>
+
+<div class="episodeDivContainer" style="margin:20px 20px 20px 20px;">
+
+    @* Statement that loops through the rows in the Episodes section of the model and displays the information needed*@
+
+    @foreach (var item in Model)
+    {
+
+
+        <div style="height:auto; width: 250px; border-radius: 5px; background-color:#CBB6E0; margin: 20px 80px 20px 80px; border: 1px solid black;">
+
+            <h4 style="text-align:center;"><strong>Episode @Html.DisplayFor(modelItem => item.episodeNumber) </strong></h4>
+
+            <img src="~/Content/img/@Html.DisplayFor(modelItem => item.picFileLocation)" style="height:125px; width:125px; display:block;margin:auto;" />
+
+            <br />
+
+            <p style="text-align: center;"> @Html.DisplayFor(modelItem => item.description) </p>
+
+            @* Audio tag that gets the mp3 from the content folder and gives the user the ability to play episodes on the site*@
+
+            <audio controls style="width:200px; display:block; margin:auto;">
+                <source src="~/Content/AudioFiles/@Html.DisplayFor(modelItem => item.soundFileLocation)" type="audio/mp3" />
+            </audio>
+
+            <br />
+
+        </div>
+
+    }
+
+</div>
+
+<div style="margin:auto; text-align:center; margin-bottom: 25px;">
+    <form action="https://open.spotify.com/show/6hagSON4oxuUsJQY7eDN7W" method="get" target="_blank">
+        <button type="submit" class="btn btn-danger btn-lg">Follow Us on Spotify</button>
+    </form>
+    <br />
+    <form action="https://podcasts.apple.com/us/podcast/the-scaredy-cats-podcast/id1479416698?uo=4" method="get" target="_blank">
+        <button type="submit" class="btn btn-danger btn-lg">Follow Us on Itunes</button>
+    </form>
+    <br />
+    <button style="margin:10px 0px 10px 0px;" class="btn btn-warning btn-lg" onclick="create()">Subscribe for Email-Alterts!!!</button>
+
+</div>
+
+@* Modal code that is loaded by the create function that allows users to subsribe with their email *@
+
+<div class="modal fade" id="ActionModal">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background-color: lightgrey;">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4 class="modal-title" id="modalTitle" style="text-align:center;"></h4>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    @* Script that is loaded by clicking the "Subscribe for Email-Alerts!!!" button and facilitates users' subscribing *@
+
+    var create = function () {
+        var createURL = "/Home/Subscribe";
+        $("#modalTitle").html("Enter your preferred info and we'll let you know when we drop anything new!!!");
+        $("#modalBody").load(createURL, function () {
+            $("#ActionModal").modal("show");
+        });
+    }
+</script>

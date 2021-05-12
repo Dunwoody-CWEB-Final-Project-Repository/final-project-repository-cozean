@@ -1,0 +1,51 @@
+﻿@model FNLPRJ.CleanProject.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2 style="text-align:center;">@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4 style="text-align:center;">The information below will create for me a new Admin!</h4>
+    <h4 style="text-align:center;">Be careful who you let in oh wise leader...</h4>
+    <hr />
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group" style="margin:auto;">
+        <p style="text-align:center;"><strong>Email:</strong></p>
+        <div>
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", style = "margin:auto;" })
+        </div>
+    </div>
+
+    <br />
+
+    <div class="form-group" style="margin:auto;">
+        <p style="text-align:center;"><strong>Password:</strong></p>
+        <div>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", style = "margin:auto;" })
+        </div>
+    </div>
+
+    <br />
+
+    <div class="form-group" style="margin:auto;">
+        <p style="text-align:center;"><strong>Confirm Password:</strong></p>
+        <div>
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", style = "margin:auto;" })
+        </div>
+    </div>
+
+    <br />
+
+    <div class="form-group">
+        <div style="text-align:center;">
+            <input type="submit" class="btn btn-success" value="Register" />
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

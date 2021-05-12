@@ -1,0 +1,48 @@
+﻿@model FNLPRJ.CleanProject.Models.Subscriber
+
+<link href="~/Content/Validation.css" rel="stylesheet" />
+
+
+
+    @using (Html.BeginForm("Subscribe", "Home", FormMethod.Post))
+    {
+        @Html.ValidationSummary()
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group" style="text-align: center;">
+                <h4 style="text-align: center;"><strong>Preferred Name:</strong></h4>
+                <div>
+                    @Html.EditorFor(model => model.prefName, new { htmlAttributes = new { @class = "form-control", style = "margin:auto;", placeholder = "xxxxxxxxx" } })
+                    @Html.ValidationMessageFor(model => model.prefName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align:center;">
+                <h4 style="text-align: center;"><strong>Email:</strong></h4>
+                <div>
+                    @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", style = "margin:auto;", placeholder = "xxxx@xxxx.xxxx" } })
+                    @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+            <div class="form-group">
+                <div style="text-align: center;">
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div style="text-align:center;">
+        <button>@Html.ActionLink("Back to Home", "Index")</button>
+    </div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

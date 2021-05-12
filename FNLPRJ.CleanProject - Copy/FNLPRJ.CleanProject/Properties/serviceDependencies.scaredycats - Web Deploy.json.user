@@ -1,0 +1,25 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "scaredycats.resourceGroupLocation": {
+      "Type": null,
+      "Value": "eastus2"
+    },
+    "scaredycats.subscriptionId": {
+      "Type": "subscription",
+      "Value": "0d002195-a48c-48e8-87ed-f147e0ac2df8"
+    },
+    "scaredycats.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "FINALPRJ"
+    },
+    "scaredycats.resourceName": {
+      "Type": null,
+      "Value": "scaredycats"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "0d002195-a48c-48e8-87ed-f147e0ac2df8"
+    }
+  }
+}
